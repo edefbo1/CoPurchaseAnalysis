@@ -10,8 +10,6 @@ Questo progetto implementa un'analisi di co-acquisto utilizzando **Scala** e **A
   Punto di ingresso del programma Spark.
 - `src/main/scala/copurchase/PairCounter.scala`  
   Logica per il calcolo delle co-occorrenze tra coppie di prodotti.
-- `order_products.csv`  
-  File CSV di input contenente coppie `(order_id, product_id)`.
 - `powershell_benchmark.ps1`  
   Script PowerShell per creare cluster Dataproc, eseguire il job Spark e registrare i risultati della scalabilità.
 
