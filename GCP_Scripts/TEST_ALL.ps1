@@ -12,7 +12,7 @@ $INPUT     = "gs://$BUCKET/input/order_products.csv"
 $OUTPUT_BASE = "gs://$BUCKET/output"
 
 # Lista dei numeri di worker da testare
-$WORKERS_LIST = @(2,3,4)
+$WORKERS_LIST = @(6)
 
 # File CSV risultati
 $CSV_FILE = "scalability_results.csv"
