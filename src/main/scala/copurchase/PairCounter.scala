@@ -3,10 +3,6 @@ package copurchase
 import org.apache.spark.rdd.RDD
 import org.apache.spark.HashPartitioner
 
-/**
- * Oggetto che contiene la logica per calcolare le co-occorrenze
- * tra coppie di prodotti acquistati nello stesso ordine.
- */
 object PairCounter {
 
   def computeCoPurchases(data: RDD[(Int, Int)], numWorkers: Int): RDD[(Int, Int, Int)] = {

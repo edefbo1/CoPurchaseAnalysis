@@ -28,7 +28,7 @@ object CoPurchaseAnalysis {
         .filter(_.length == 2)
         .map(arr => (arr(0).toInt, arr(1).toInt))
 
-      // Passiamo numWorkers a computeCoPurchases
+
       val resultRDD = PairCounter.computeCoPurchases(inputRDD, numWorkers)
 
       resultRDD

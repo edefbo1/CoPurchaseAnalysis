@@ -3,16 +3,16 @@
 # ================================
 
 # Parametri di progetto
-$PROJECT   = "erudite-course-457308-h3"
+$PROJECT   = ""
 $REGION    = "europe-west1"
 $ZONE      = "europe-west1-b"
-$BUCKET    = "dataset-copurchase"
+$BUCKET    = ""
 $JAR       = "gs://$BUCKET/copurchaseanalysis_2.12-0.1.jar"
 $INPUT     = "gs://$BUCKET/input/order_products.csv"
 $OUTPUT_BASE = "gs://$BUCKET/output"
 
 # Lista dei numeri di worker da testare
-$WORKERS_LIST = @(6)
+$WORKERS_LIST = @(1,2,3,4,5,6)
 
 # File CSV risultati
 $CSV_FILE = "scalability_results.csv"
