@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROJECT_ID="inserisci-il-tuo-project-id"
-REGION="europe-west1"  # Cambia secondo la regione usata
+REGION="europe-west1"
 
 echo "Eliminazione cluster DataProc..."
 for cluster in $(gcloud dataproc clusters list --region=${REGION} --project=${PROJECT_ID} --format="value(name)"); do

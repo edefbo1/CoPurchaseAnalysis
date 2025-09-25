@@ -9,8 +9,8 @@ import org.apache.spark.HashPartitioner
  */
 object PairCounter {
 
-  def computeCoPurchases(data: RDD[(Int, Int)]): RDD[(Int, Int, Int)] = {
-    val partitioned = data.partitionBy(new HashPartitioner(data.context.defaultParallelism * 2))
+  def computeCoPurchases(data: RDD[(Int, Int)], numWorkers: Int): RDD[(Int, Int, Int)] = {
+    val partitioned = data.partitionBy(new HashPartitioner(4 * numWorkers))
 
     val grouped = partitioned.groupByKey()
 
