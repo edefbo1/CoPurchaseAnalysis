@@ -45,4 +45,6 @@ $CSV_FILE    = "scalability_results.csv"
 ```
 
 ## Esecuzione script
+```powershell
 .\powershell_benchmark.ps1
+```
