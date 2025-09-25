@@ -44,6 +44,17 @@ $WORKERS_LIST = @(1,2,3,4,5,6)
 $CSV_FILE    = "scalability_results.csv"
 ```
 
+## Caricamento su bucket
+
+```bash
+sbt package
+# Il JAR generato sarà in target/scala-2.12/copurchaseanalysis_2.12-0.1.jar
+# Copialo nel bucket GCS:
+gsutil cp target/scala-2.12/copurchaseanalysis_2.12-0.1.jar gs://<YOUR_BUCKET_NAME>/
+gsutil cp order_products.csv gs://<YOUR_BUCKET_NAME>/input/
+
+```
+
 ## Esecuzione script
 ```powershell
 .\powershell_benchmark.ps1
